@@ -1,0 +1,401 @@
+/* ------------------------------------------------------------- */
+/* 
+html5doctor.com Reset Stylesheet
+v1.6.1
+Last Updated: 2010-09-17
+Author: Richard Clark - http://richclarkdesign.com 
+Twitter: @rich_clark
+*/
+ 
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+ 
+body {
+    line-height:1;
+}
+ 
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section { 
+    display:block;
+}
+ 
+nav ul {
+    list-style:none;
+}
+ 
+blockquote, q {
+    quotes:none;
+}
+ 
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content:'';
+    content:none;
+}
+ 
+a {
+    margin:0;
+    padding:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+ 
+/* change colours to suit your needs */
+ins {
+    background-color:#ff9;
+    color:#000;
+    text-decoration:none;
+}
+ 
+/* change colours to suit your needs */
+mark {
+    background-color:#ff9;
+    color:#000; 
+    font-style:italic;
+    font-weight:bold;
+}
+ 
+del {
+    text-decoration: line-through;
+}
+ 
+abbr[title], dfn[title] {
+    border-bottom:1px dotted;
+    cursor:help;
+}
+ 
+table {
+    border-collapse:collapse;
+    border-spacing:0;
+}
+ 
+/* change border colour to suit your needs */
+hr {
+    display:block;
+    height:1px;
+    border:0;   
+    border-top:1px solid #cccccc;
+    margin:1em 0;
+    padding:0;
+}
+ 
+input, select {
+    vertical-align:middle;
+}
+/* ----------------------------------------------------------- */
+body{
+    font-family: 游ゴシック体, 'Yu Gothic', YuGothic, 'ヒラギノ角ゴシック Pro', 'Hiragino Kaku Gothic Pro', メイリオ, Meiryo, Osaka, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
+    background-color:#000;
+    color:#f0f0f0;
+}
+.site-header{
+    height:100px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    position:fixed;
+    width:100%;
+    background-color:rgba(0,0,0,.5);
+    z-index:100;
+}
+.header-logo{
+    width:auto;
+    margin:0 0 0 50px;
+    font-size:35px;
+}
+.header-logo a{
+    color:#f0f0f0;
+    text-decoration:none;
+    font-weight:bold;
+}
+.header-list{
+    width:auto;
+    margin:0 50px 0 0;
+    float:right;
+    display:block;
+}
+.header-list li{
+    float:left;
+    list-style:none;
+    padding-left:20px;
+}
+.header-list li:hover{
+    opacity:0.7;
+    cursor:pointer;
+}
+.header-list li a{
+    color:#f0f0f0;
+    text-decoration:none;
+} 
+.ham-btn{
+    height:50px;
+    width:50px;
+    position:fixed;
+    top:10px;
+    right:4px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    visibility:hidden;
+    z-index:2;
+}
+.ham-icon{
+    width:40px;
+    height:36px;
+    position:relative;
+}
+.ham-icon span{
+    display:block;
+    width:100%;
+    height:4px;
+    background-color:#f0f0f0;
+    border-radius:4px;
+    position:absolute;
+}
+.ham-icon span:nth-child(1){
+    top:0;
+    transition:0.5s;
+}
+.ham-icon span:nth-child(2){
+    top:16px;
+    transition:0.5s;
+}
+.ham-icon span:nth-child(3){
+    bottom:0;
+    transition:0.5s;
+}
+.nav{
+    visibility:hidden;
+    background-color:black;
+    opacity:0.9;
+    width:100%;
+    height:100%;
+    position:absolute;
+    top:0;
+    left:-100vw;
+    z-index:1;
+    transition:0.7s;
+}
+.nav li{
+    float:left;
+    list-style:none;
+    padding-left:20px;
+}
+.nav li a{
+    color:white;
+    text-decoration:none;
+    display:block;
+    width:auto;
+    height:50px;
+    line-height:50px;
+} 
+/* ------------------------------------------------------------- */
+.top-wrapper{
+    height:100vh;
+    width:100%;
+    position:relative;
+}
+.message{
+    position:absolute;
+    width:40%;
+    left:30%;
+    right:30%;
+    top:50%;
+    text-align:center;
+}
+.message p{
+    display:block;
+    font-size:70px;
+    letter-spacing:8px;
+}
+.move-target{
+    width:100%;
+    height:700px;
+    display:flex;
+    justify-content:center;
+    flex-direction:row;
+    padding-top:100px;
+}
+.move-target:nth-child(4){
+    flex-direction:row-reverse;
+}
+.detail{
+    width:45%;
+}
+.title{
+    margin:20px 0 0 20px;
+}
+.title h1{
+    font-size:32px;
+}
+.title h2{
+    font-size:18px;
+    font-weight:lighter;
+    opacity:.8;
+}
+.content{
+    margin:50px 40px 0 20px;
+}
+.content p{
+    line-height:22px;
+}
+.content ul{
+    padding-top:30px;
+}
+.specific-li li{
+    margin-left:40px;
+    list-style:square;
+}
+.specific-li li:not(:first-child){
+    padding-top:10px;
+}
+.specific-li li a{
+    color:#f0f0f0;
+    text-decoration:none;
+}
+.specific-li li:hover{
+    opacity:.7;
+}
+.picture-zone{
+    width:45%; 
+}
+.picture{
+    width:50%;
+    height:300px;
+}
+.picture, img{
+    width:100%;
+    height:100%;
+}
+video{
+    margin:100px 5% 0 5%;
+    width:90%;
+}
+/* ------------------------------------------------------------- */
+.site-footer{
+    height:100px;
+    width:100%;
+    padding-top:70px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+.footer-list{
+    width:auto;
+    margin:0 0 0 50px;
+}
+.footer-list li{
+    float:left;
+    list-style:none;
+}
+.footer-list li:not(:first-child){
+    padding-left:20px;
+}
+.footer-list li:hover{
+    opacity:0.7;
+    cursor:pointer;
+}
+.footer-list li a{
+    color:#f0f0f0;
+    text-decoration:none;
+} 
+.footer-right{
+    width:auto;
+    margin:0 50px 0 0;
+}
+.footer-right p{
+    font-size:12px;
+}
+/* ------------------------------------------------------------- */
+@media screen and (max-width:500px){
+    body{
+        width:100%;
+    }
+    .header-logo{
+        width:60%;
+    }
+    .header-list{
+        visibility:hidden;
+        width:30%;
+    }
+    .header-list li{
+        padding-top:4px;
+    }
+    .title{
+        margin:20px 0 20px 50px;
+    }
+    .swiper{
+        height:300px;
+    }
+    .message{
+        width:80%;
+        top:5px;
+    }
+    .message p{
+        font-size:10px;
+        line-height:16px;
+    }
+    .ham-btn{
+        visibility:visible;
+    }
+    .nav.active{
+        position:fixed;
+        background-color:black;
+        height:100%;
+        opacity:0.9;
+        visibility:visible;
+        left:0;
+    }
+    .nav li{
+        padding-top:70px;
+    }
+    .ham-icon.active span:nth-child(1){
+        top:16px;
+        transform:rotate(45deg);
+        background-color:#cccccc;
+    }
+    .ham-icon.active span:nth-child(2){
+        opacity:0;
+    }
+    .ham-icon.active span:nth-child(3){
+        top:16px;
+        transform:rotate(-45deg);
+        background-color:#cccccc;
+    }
+    footer{
+        height:100px;
+        padding-top:20px;
+    }
+    .footer-list{
+        visibility:hidden;
+        width:30%;
+        margin:0 20px;
+    }
+    .footer-list li{
+        padding-top:4px;
+    }
+    .footer-right{
+        width:70%;
+        margin:0 0;
+        padding-right:0;
+    }
+}
