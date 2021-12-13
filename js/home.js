@@ -12,24 +12,6 @@ window.onpageshow = function(event){
 //       movepage.style.transform = 'translateY(0vw)';
 //   })
 
-  // picture changing
-  const swiper = new Swiper('.swiper', {
-      loop: true,
-      speed: 500,
-      autoplay:{
-        delay:2500
-      },
-    
-      pagination: {
-        el: '.swiper-pagination',
-      },
-    
-      navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-      },
-    });
-
   // hamberger-menu
   const hambergerBtn = document.getElementById('ham-btn');
   const hambergerIcon = document.getElementById('ham-icon');
