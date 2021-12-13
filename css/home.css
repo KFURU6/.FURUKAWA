@@ -185,7 +185,7 @@ body{
 }
 .nav{
     visibility:hidden;
-    background-color:black;
+    background-color:#f0f0f0;
     opacity:0.9;
     width:100%;
     height:100%;
@@ -325,8 +325,14 @@ video{
 .footer-right p{
     font-size:12px;
 }
-/* ------------------------------------------------------------- */
-@media screen and (max-width:500px){
+
+/* Tablet-size 対応 css */
+@media screen and(min-width:326px) and (max-width:950px){
+
+}
+
+/* iphone-size 対応 css */
+@media screen and (max-width:325px){
     body{
         width:100%;
     }
