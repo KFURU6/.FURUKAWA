@@ -219,16 +219,17 @@ body{
 }
 .message{
     position:absolute;
-    width:40%;
-    left:30%;
-    right:30%;
+    width:100%;
     top:50%;
     text-align:center;
 }
 .message p{
     display:block;
-    font-size:70px;
+    font-size:120px;
+    /* font-size:300px; */
     letter-spacing:8px;
+    /* letter-spacing:120px; */
+    transition:3s;
 }
 .move-target{
     width:100%;
@@ -237,6 +238,9 @@ body{
     justify-content:center;
     flex-direction:row;
     padding-top:100px;
+    opacity:0.0;
+    transform:translateY(70px);
+    transition:2s;
 }
 .move-target:nth-child(4){
     flex-direction:row-reverse;
