@@ -7,11 +7,11 @@ window.onpageshow = function(event){
 
   // message
 
-  const topMessage = document.getElementById.
-  window.addEventListener('load',function() {
-    topMessage.style.fontSize = "16px";
-    topMessage.style.letterSpacing = "8px";
-  })
+  // const topMessage = document.getElementById.
+  // window.addEventListener('load',function() {
+  //   topMessage.style.fontSize = "16px";
+  //   topMessage.style.letterSpacing = "8px";
+  // })
 
 // hamberger-menu
 const hambergerBtn = document.getElementById('ham-btn');
