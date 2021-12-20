@@ -6,12 +6,11 @@ window.onpageshow = function(event){
   }
 
   // message
-
-  // const topMessage = document.getElementById.
-  // window.addEventListener('load',function() {
-  //   topMessage.style.fontSize = "16px";
-  //   topMessage.style.letterSpacing = "8px";
-  // })
+  const topMessage = document.getElementById('message');
+  window.addEventListener('load',function(){
+    topMessage.style.letterSpacing = "8px";
+    topMessage.style.opacity = "1.0";
+  })
 
 // hamberger-menu
 const hambergerBtn = document.getElementById('ham-btn');
@@ -22,9 +21,34 @@ const nav = document.getElementById('nav');
     hambergerIcon.classList.toggle('active')
     nav.classList.toggle('active')
 });
+// nav click
+const navTop = document.getElementById('top-btn');
+navTop.addEventListener('click',function(){
+  hambergerBtn.classList.remove('active')
+  hambergerIcon.classList.remove('active')
+  nav.classList.remove('active')
+})
+const navService = document.getElementById('service-btn');
+navService.addEventListener('click',function(){
+  hambergerBtn.classList.remove('active')
+  hambergerIcon.classList.remove('active')
+  nav.classList.remove('active')
+})
+const navWorks = document.getElementById('works-btn');
+navWorks.addEventListener('click',function(){
+  hambergerBtn.classList.remove('active')
+  hambergerIcon.classList.remove('active')
+  nav.classList.remove('active')
+})
+const navBlog = document.getElementById('blog-btn');
+navBlog.addEventListener('click',function(){
+  hambergerBtn.classList.remove('active')
+  hambergerIcon.classList.remove('active')
+  nav.classList.remove('active')
+})
 
 // move-target
-console.log('画面の高さ',window.innerHeight)
+console.log('ScreenHeight',window.innerHeight)
 const animationTargetElement = document.querySelectorAll('.move-target');
 console.log(animationTargetElement);
 window.addEventListener('scroll', function(){
