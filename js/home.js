@@ -27,25 +27,25 @@ navTop.addEventListener('click',function(){
   hambergerBtn.classList.remove('active')
   hambergerIcon.classList.remove('active')
   nav.classList.remove('active')
-})
+});
 const navService = document.getElementById('service-btn');
 navService.addEventListener('click',function(){
   hambergerBtn.classList.remove('active')
   hambergerIcon.classList.remove('active')
   nav.classList.remove('active')
-})
+});
 const navWorks = document.getElementById('works-btn');
 navWorks.addEventListener('click',function(){
   hambergerBtn.classList.remove('active')
   hambergerIcon.classList.remove('active')
   nav.classList.remove('active')
-})
+});
 const navBlog = document.getElementById('blog-btn');
 navBlog.addEventListener('click',function(){
   hambergerBtn.classList.remove('active')
   hambergerIcon.classList.remove('active')
   nav.classList.remove('active')
-})
+});
 
 // move-target
 console.log('ScreenHeight',window.innerHeight)
@@ -62,4 +62,4 @@ window.addEventListener('scroll', function(){
             console.log('hello');
         }
     }
-})
+});
