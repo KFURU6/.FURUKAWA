@@ -55,11 +55,22 @@ window.addEventListener('scroll', function(){
     for(let i = 0; i <= animationTargetElement.length; i++){
         const ElementHeight = animationTargetElement[i].getBoundingClientRect().top;
         console.log(ElementHeight)
-        if(window.innerHeight * .7 > ElementHeight){
-            animationTargetElement[i].classList.add('active');
-            animationTargetElement[i].style.opacity = "1.0";
-            animationTargetElement[i].style.transform = "translateY(0)";
-            console.log('hello');
+        if(window.innerHeight * .6 > ElementHeight){
+          animationTargetElement[i].classList.add('active');
+          animationTargetElement[i].style.opacity = "1.0";
+          animationTargetElement[i].style.transform = "translateY(0)";
+        }
+        else if (window.innerHeight * .3 < ElementHeight){
+          animationTargetElement[i].classList.remove('active');
+          animationTargetElement[i].style.opacity = "0";
+          animationTargetElement[i].style.transform = "translateY(100px)";
         }
     }
 });
+
+// Training
+// const videoStart = document.getElementsByTagName('video');
+// const videoHight = videoStart.getBoundingClientRect().top;
+// window.addEventListener('scroll',function(){
+//   if(window.innerHeight )
+// });
