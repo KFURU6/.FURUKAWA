@@ -16,7 +16,7 @@ window.onpageshow = function(event){
 const hambergerBtn = document.getElementById('ham-btn');
 const hambergerIcon = document.getElementById('ham-icon');
 const nav = document.getElementById('nav');
-  hambergerIcon.addEventListener('click', function() {
+    hambergerIcon.addEventListener('click', function() {
     hambergerBtn.classList.toggle('active')
     hambergerIcon.classList.toggle('active')
     nav.classList.toggle('active')

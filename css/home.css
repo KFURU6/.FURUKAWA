@@ -79,71 +79,73 @@ header {
     margin-bottom: 20px;
 }
 /* -----hamburger menu----- */
+.hamberger-menu {
+    /* visibility: hidden; */
+    display: none;
+}
 .ham-btn{
-    height:50px;
-    width:50px;
-    position:fixed;
-    top:10px;
-    right:4px;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    visibility:hidden;
-    z-index:2;
+    height: 50px;
+    width: 50px;
+    position: fixed;
+    top: 10px;
+    right: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* visibility: hidden; */
+    z-index: 200;
 }
 .ham-icon{
-    width:40px;
-    height:36px;
-    position:relative;
+    width: 40px;
+    height: 36px;
+    position: relative;
 }
 .ham-icon span{
-    display:block;
-    width:100%;
-    height:4px;
-    background-color:#f0f0f0;
-    border-radius:4px;
-    position:absolute;
+    display: block;
+    width: 100%;
+    height: 4px;
+    background-color: #f0f0f0;
+    border-radius: 4px;
+    position: absolute;
 }
 .ham-icon span:nth-child(1){
-    top:0;
-    transition:0.5s;
+    top: 0;
+    transition: .5s;
 }
 .ham-icon span:nth-child(2){
-    top:16px;
-    transition:0.5s;
+    top: 16px;
+    transition: .5s;
 }
 .ham-icon span:nth-child(3){
-    bottom:0;
-    transition:0.5s;
+    bottom: 0;
+    transition: .5s;
 }
 .hamburger-nav{
-    visibility:hidden;
-    background-color:#f0f0f0;
-    color:#000;
-    opacity:0.9;
-    width:100%;
-    height:100%;
-    position:absolute;
-    top:0;
-    left:-100vw;
-    z-index:1;
-    text-align:center;
-    transition:0.7s;
-    padding-top:100px;
+    /* visibility:hidden; */
+    background-color: #f0f0f0;
+    opacity: .9;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    /* left: -100vw; */
+    z-index: 150;
+    text-align: center;
+    transition: .7s;
+    padding-top: 100px;
 }
-.nav li{
-    width:100%;
-    float:left;
-    list-style:none;
-    align-items:center;
+.hamburger-nav-item {
+    color: #000;
+    width: 100%;
+    float: left;
+    align-items: center;
 }
 .nav li a{
-    color:#000;;
-    text-decoration:none;
-    display:block;
-    height:50px;
-    line-height:50px;
-    transition:4s;
+    color: #000;;
+    display: block;
+    height: 50px;
+    line-height: 50px;
+    transition: 4s;
 }
 /* -----top----- */
 .top {
@@ -267,13 +269,15 @@ footer {
         display: none;
     }
     /* -----hamburger menu----- */
+    .hamberger-menu {
+        /* visibility: hidden; */
+        display: inline;
+    }
     .ham-btn {
         visibility:visible;
-        z-index:101;
     }
     .hamburger-nav.active{
         position:fixed;
-        opacity:0.9;
         visibility:visible;
         left:0;
     }
