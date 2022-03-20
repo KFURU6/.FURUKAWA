@@ -71,6 +71,7 @@ header {
 .header-nav-item {
     font-size: 20px;
     margin-right: 20px;
+    transition: .5s;
 }
 .section-title {
     text-align: center;
@@ -167,6 +168,9 @@ header {
 }
 .price-list {
     width: 100%;
+}
+td {
+    padding: 5px;
 }
 /* -----works----- */
 .work-text {
