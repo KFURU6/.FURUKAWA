@@ -67,10 +67,3 @@ window.addEventListener('scroll', function(){
         }
     }
 });
-
-// Training
-// const videoStart = document.getElementsByTagName('video');
-// const videoHight = videoStart.getBoundingClientRect().top;
-// window.addEventListener('scroll',function(){
-//   if(window.innerHeight )
-// });
