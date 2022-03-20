@@ -48,10 +48,12 @@
         </div>
             <ul class="hamburger-nav" id="nav">
                 <li class="hamburger-nav-item"><a href="#top" id="top-btn">Top</a></li>
+                <li class="hamburger-nav-item"><a href="#about" id="about-btn">About</a></li>
+                <li class="hamburger-nav-item"><a href="#skills" id="skills-btn">Sklls</a></li>
                 <li class="hamburger-nav-item"><a href="#service" id="service-btn">Service</a></li>
                 <li class="hamburger-nav-item"><a href="#works" id="works-btn">Works</a></li>
                 <li class="hamburger-nav-item"><a href="#blog" id="blog-btn">Blog</a></li>
-                <li class="hamburger-nav-item"><a href="mailto:my_time_is_now@i.softbank.jp">Contact</a></li>
+                <li class="hamburger-nav-item"><a href="#contact" id="contact-btn">Contact</a></li>
                 <li class="hamburger-nav-item"><a href="https://www.instagram.com/kanta.f96/"><i class="fab fa-instagram"></i></a></li>
                 <li class="hamburger-nav-item"><a href="https://twitter.com/home?ref_src=twsrc%5Etfw%7Ctwcamp%5Eembeddedtimeline%7Ctwterm%5Eprofile%3Ahome%7Ctwgr%5EeyJ0ZndfZXhwZXJpbWVudHNfY29va2llX2V4cGlyYXRpb24iOnsiYnVja2V0IjoxMjA5NjAwLCJ2ZXJzaW9uIjpudWxsfSwidGZ3X2hvcml6b25fdHdlZXRfZW1iZWRfOTU1NSI6eyJidWNrZXQiOiJodGUiLCJ2ZXJzaW9uIjpudWxsfSwidGZ3X3NwYWNlX2NhcmQiOnsiYnVja2V0Ijoib2ZmIiwidmVyc2lvbiI6bnVsbH19&ref_url=http%3A%2F%2Flocalhost%3A10003%2Fworks%2F"><i class="fab fa-twitter-square"></i></a></li>
             </ul>
@@ -67,7 +69,7 @@
     <section class="about" id="about">
         <h2 class="section-title">Furukawaについて</h2>
         <div class="container d-flex move-target">
-            <div class="detail flex-half-size">
+            <div class="detail flex-size">
                 <p>
                     1996年生まれ。ふたご座のo型。千葉県出身。千葉県在住。</br>
                     私は中学生の時から始めたサッカーを今も継続し、普通にサッカーが好きな人です。</br>
@@ -80,7 +82,7 @@
                     なにか目標を持ち日々を過ごすことで人生を楽しみたいと感じております。</br>
                 </p>
             </div>
-            <div class="picture-zone flex-half-size">
+            <div class="picture-zone flex-size">
                 <img src="./image/IMG_3098.JPG" class="section-img" alt="古川の写真">
             </div>
         </div>
@@ -115,34 +117,37 @@
     <section class="service" id="service">
         <h2 class="section-title">Service</h2>
         <!-- move-target 1 -->
-        <div class="container d-flex move-target">
-            <div class="detail flex-half-size" id="service">
+        <div class="container d-flex reverse-flex move-target">
+            <div class="detail flex-size" id="service">
                 <p class="service-text">.Furukawaはお客様のご要望を的確にヒアリングし、期待以上のサービスを提供できるようベストを尽くします。</br>
                     どのようなご要件も受付させていただきます。
                 </p>
                 <table class="price-list">
                     <thead>
                         <tr>
-                            <th colspan="2">price list</th>
+                            <th colspan="3">price list</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td>LP（ランディングページ）制作</td><td>¥30,000</td>
+                            <td>Task</td><td>Price</td><td>納品期間</td>
                         </tr>
                         <tr>
-                            <td>ウェブサイト制作</td><td>¥30,000</td>
+                            <td>LP（ランディングページ）制作</td><td>¥30,000</td><td>1ヶ月</td>
                         </tr>
                         <tr>
-                            <td>コーポレートサイト制作</td><td>¥30,000</td>
+                            <td>ウェブサイト制作</td><td>¥30,000</td><td>1ヶ月</td>
                         </tr>
                         <tr>
-                            <td>ホームページ修正</td><td>¥5,000</td>
+                            <td>コーポレートサイト制作</td><td>¥30,000</td><td>1ヶ月</td>
+                        </tr>
+                        <tr>
+                            <td>ホームページ修正</td><td>¥5,000</td><td>1週間</td>
                         </tr>
                     </tbody>
                 </table>
             </div>
-            <div class="picture-zone flex-half-size">
+            <div class="picture-zone flex-size">
                 <img src="image/service.jpg" class="section-img" alt="iPhone">
             </div>
         </div>
@@ -160,7 +165,7 @@
                     <li><a href="https://kfuru6.github.io/bicycle_site/bicycle.html">KAKERU MICHI Profile Site</a></li>
                 </ul>
             </div>
-            <div class="picture-zone flex-half-size">
+            <div class="picture-zone flex-size">
                 <img src="image/work.jpg" class="section-img" alt="Pc">
             </div>
         </div>
@@ -177,8 +182,8 @@
     <section class="blog"  id="blog">
         <h2 class="section-title">Blog</h2>
         <!-- move-target 3 -->
-        <div class="container d-flex move-target" id="blog">
-            <div class="detail flex-half-size">
+        <div class="container d-flex reverse-flex move-target" id="blog">
+            <div class="detail flex-size">
                 <p class="blog-text">.Furukawaのプライベートなどに関する記事をご覧ください。</br>
                     私の趣味や日々の生活で感じたこと。皆様にとって少しでも役に立つ情報を提供することを目指しております。
                 </p>
@@ -188,7 +193,7 @@
                     </li>
                 </ul>
             </div>
-            <div class="picture-zone flex-half-size">
+            <div class="picture-zone flex-size">
                 <img src="image/blog.jpg" class="section-img" alt="植物">
             </div>
         </div>
@@ -221,10 +226,12 @@
             <div class="footer-list">
                 <ul class="footer-nav d-flex">
                     <li class="footer-nav-item"><a href="#top">Top</a></li>
+                    <li class="footer-nav-item"><a href="#about">About</a></li>
+                    <li class="footer-nav-item"><a href="#skills">Skills</a></li>
                     <li class="footer-nav-item"><a href="#service">Service</a></li>
                     <li class="footer-nav-item"><a href="#works">Works</a></li>
                     <li class="footer-nav-item"><a href="#blog">Blog</a></li>
-                    <li class="footer-nav-item"><a href="mailto:my_time_is_now@i.softbank.jp">Contact</a></li>
+                    <li class="footer-nav-item"><a href="#contact">Contact</a></li>
                     <li class="footer-nav-item"><a href="https://www.instagram.com/kanta.f96/"><i class="fab fa-instagram"></i></a></li>
                     <li class="footer-nav-item"><a href="https://twitter.com/home?ref_src=twsrc%5Etfw%7Ctwcamp%5Eembeddedtimeline%7Ctwterm%5Eprofile%3Ahome%7Ctwgr%5EeyJ0ZndfZXhwZXJpbWVudHNfY29va2llX2V4cGlyYXRpb24iOnsiYnVja2V0IjoxMjA5NjAwLCJ2ZXJzaW9uIjpudWxsfSwidGZ3X2hvcml6b25fdHdlZXRfZW1iZWRfOTU1NSI6eyJidWNrZXQiOiJodGUiLCJ2ZXJzaW9uIjpudWxsfSwidGZ3X3NwYWNlX2NhcmQiOnsiYnVja2V0Ijoib2ZmIiwidmVyc2lvbiI6bnVsbH19&ref_url=http%3A%2F%2Flocalhost%3A10003%2Fworks%2F"><i class="fab fa-twitter-square"></i></a></li>
                 </ul>

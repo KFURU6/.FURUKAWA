@@ -29,15 +29,15 @@ section {
     max-width: 1120px;
     margin: auto;
 }
-.move-target:nth-child(2) {
-    flex-direction:row-reverse;
-}
 .d-flex {
     display: flex;
     justify-content: space-between;
     margin: auto;
 }
-.flex-half-size {
+.reverse-flex {
+    flex-direction: row-reverse;
+}
+.flex-size {
     width: 50%;
     margin: 0 10px;
 }
@@ -58,6 +58,7 @@ header {
     position: fixed;
     margin-right: 5%;
     margin-left: 5%;
+    z-index: 100;
 }
 .logo {
     max-width: 400px;
@@ -222,7 +223,6 @@ footer {
     font-size: 20px;
     margin-left: 20px;
 }
-
 /* 
 .move-target{
     width:100%;
@@ -251,9 +251,12 @@ footer {
     .d-flex {
         display: block;
     }
-    .flex-half-size {
-        width: 100%;
-        margin: 0 0;
+    .flex-size {
+        width: 90%;
+        margin: auto;
+    }
+    .section-title {
+        font-size: 32px;
     }
     /* -----header----- */
     header {
@@ -278,12 +281,25 @@ footer {
     }
     /* -----about----- */
     /* -----skills----- */
+    .card {
+        width: 90%;
+        margin: auto;
+        margin-bottom: 20px;
+    }
     /* -----service----- */
     /* -----works----- */
     /* -----blog----- */
     /* -----contact----- */
+    form {
+        width: 70%;
+    }
     /* -----footer----- */
-
+    .footer-list {
+        display: none;
+    }
+    .footer-right {
+        text-align: center;
+    }
 }
 
 
