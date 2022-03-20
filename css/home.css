@@ -82,71 +82,53 @@ header {
 .hamberger-menu {
     position: fixed;
     left: 0;
-    /* display: none; */
+    display: none;
 }
-.ham-btn{
-    height: 50px;
-    width: 50px;
+.hamberger-btn {
+    height: 36px;
+    width: 40px;
     position: fixed;
-    top: 10px;
-    right: 4px;
+    top: 16px;
+    right: 16px;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    /* visibility: hidden; */
+    justify-content: space-between;
+    flex-direction: column;
     z-index: 200;
 }
-.ham-icon{
-    width: 40px;
-    height: 36px;
-    position: relative;
-}
-.ham-icon span{
+.hamberger-line {
     display: block;
     width: 100%;
     height: 4px;
     background-color: #f0f0f0;
     border-radius: 4px;
-    position: absolute;
-}
-.ham-icon span:nth-child(1){
-    top: 0;
     transition: .5s;
 }
-.ham-icon span:nth-child(2){
-    top: 16px;
+/* .hamberger-line:nth-child(1) {
     transition: .5s;
 }
-.ham-icon span:nth-child(3){
-    bottom: 0;
+.hamberger-line:nth-child(2) {
     transition: .5s;
 }
-.hamburger-nav{
-    /* visibility:hidden; */
+.hamberger-line:nth-child(3) {
+    transition: .5s;
+} */
+.hamburger-nav {
     background-color: #f0f0f0;
     opacity: .9;
     width: 100vw;
     height: 100vh;
     position: absolute;
     top: 0;
-    /* left: -100vw; */
+    left: -100vw;
     z-index: 150;
     text-align: center;
     transition: .7s;
-    padding-top: 100px;
+    padding-top: 70px;
 }
-.hamburger-nav-item {
+.hamburger-nav-item a {
+    font-size: 34px;
+    line-height: 60px;
     color: #000;
-    width: 100%;
-    float: left;
-    align-items: center;
-}
-.nav li a{
-    color: #000;;
-    display: block;
-    height: 50px;
-    line-height: 50px;
-    transition: 4s;
 }
 /* -----top----- */
 .top {
@@ -271,15 +253,11 @@ footer {
     }
     /* -----hamburger menu----- */
     .hamberger-menu {
-        /* visibility: hidden; */
-        display: inline;
-    }
-    .ham-btn {
-        visibility:visible;
+        display: block;
     }
     .hamburger-nav.active{
-        position:fixed;
-        visibility:visible;
+        /* position:fixed; */
+        /* visibility:visible; */
         left:0;
     }
     .ham-icon.active span:nth-child(1){
