@@ -80,8 +80,9 @@ header {
 }
 /* -----hamburger menu----- */
 .hamberger-menu {
-    /* visibility: hidden; */
-    display: none;
+    position: fixed;
+    left: 0;
+    /* display: none; */
 }
 .ham-btn{
     height: 50px;
@@ -124,8 +125,8 @@ header {
     /* visibility:hidden; */
     background-color: #f0f0f0;
     opacity: .9;
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
     position: absolute;
     top: 0;
     /* left: -100vw; */
