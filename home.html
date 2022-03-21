@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/home.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
-    <!-- <script src="./js/home.js" defer></script> -->
+    <script src="./js/home.js" defer></script>
     <meta name="google-site-verification" content="SZ8YDapOZtMcsGpy_R1BVWRQoV0731YD3pMqYLZsluw" />
 </head>
 
@@ -37,13 +37,13 @@
             </ul>
         </div>
         <!-- hamburger menu -->
-        <div class="hamberger-menu" id="hamberger-menu">
-            <div class="hamberger-btn" id="hamberger-btn">
-                <span class="hamberger-line"></span>
-                <span class="hamberger-line"></span>
-                <span class="hamberger-line"></span>
+        <div class="hamburger-menu" id="hamburger-menu">
+            <div class="hamburger-btn" id="hamburger-btn">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
             </div>
-                <ul class="hamburger-nav" id="nav">
+                <ul class="hamburger-nav active" id="nav">
                     <li class="hamburger-nav-item"><a href="#top" id="top-btn">Top</a></li>
                     <li class="hamburger-nav-item"><a href="#about" id="about-btn">About</a></li>
                     <li class="hamburger-nav-item"><a href="#skills" id="skills-btn">Sklls</a></li>
@@ -65,8 +65,8 @@
 
     <!-- about -->
     <section class="about" id="about">
-        <h2 class="section-title">Furukawaについて</h2>
-        <div class="container d-flex move-target">
+        <h2 class="section-title move-target-section-title">Furukawaについて</h2>
+        <div class="container d-flex move-target-flex-box">
             <div class="detail flex-size">
                 <p>
                     1996年生まれ。ふたご座のo型。千葉県出身。千葉県在住。</br>
@@ -88,8 +88,8 @@
 
     <!-- skills -->
     <section class="skills" id="skills">
-        <h2 class="section-title">Skills</h2>
-        <div class="container move-target">
+        <h2 class="section-title move-target-section-title">Skills</h2>
+        <div class="container move-target-flex-box">
             <div class="cards d-flex">
                 <div class="card">
                     <svg class="fa-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--! Font Awesome Pro 6.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M0 32l34.9 395.8L191.5 480l157.6-52.2L384 32H0zm308.2 127.9H124.4l4.1 49.4h175.6l-13.6 148.4-97.9 27v.3h-1.1l-98.7-27.3-6-75.8h47.7L138 320l53.5 14.5 53.7-14.5 6-62.2H84.3L71.5 112.2h241.1l-4.4 47.7z"/></svg>
@@ -112,9 +112,9 @@
 
     <!-- works -->
     <section class="works" id="works">
-        <h2 class="section-title">Works</h2>
+        <h2 class="section-title move-target-section-title">Works</h2>
         <!-- move-target 2 -->
-        <div class="container d-flex reverse-flex move-target">
+        <div class="container d-flex reverse-flex move-target-flex-box">
             <div class="detail flex-half-size">
                 <p class="work-text">.Furukawaが過去に制作した実績をご紹介します。</p>
                 <ul class="works-list">
@@ -130,9 +130,9 @@
 
     <!-- service -->
     <section class="service" id="service">
-        <h2 class="section-title">Service</h2>
+        <h2 class="section-title move-target-section-title">Service</h2>
         <!-- move-target 1 -->
-        <div class="container d-flex move-target">
+        <div class="container d-flex move-target-flex-box">
             <div class="detail flex-size" id="service">
                 <p class="service-text">.Furukawaはお客様のご要望を的確にヒアリングし、期待以上のサービスを提供できるようベストを尽くします。</br>
                     どのようなご要件も受付させていただきます。
@@ -178,9 +178,9 @@
 
     <!-- Blog -->
     <section class="blog"  id="blog">
-        <h2 class="section-title">Blog</h2>
+        <h2 class="section-title move-target-section-title">Blog</h2>
         <!-- move-target 3 -->
-        <div class="container d-flex reverse-flex move-target" id="blog">
+        <div class="container d-flex reverse-flex move-target-flex-box" id="blog">
             <div class="detail flex-size">
                 <p class="blog-text">.Furukawaのプライベートなどに関する記事をご覧ください。</br>
                     私の趣味や日々の生活で感じたこと。皆様にとって少しでも役に立つ情報を提供することを目指しております。
@@ -205,7 +205,7 @@
     
     <!-- contact -->
     <section class="contact" id="contact">
-        <h2 class="section-title">Contact</h2>
+        <h2 class="section-title move-target-section-title">Contact</h2>
         <div class="container">
             <form action="" method="post">
                 <label for="name">Name :</label>

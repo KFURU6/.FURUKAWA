@@ -41,12 +41,21 @@ section {
     width: 50%;
     margin: 0 10px;
 }
+.move-target-section-title {
+    opacity: 0;
+    transform: translateX(-100%);
+    transition: 2.5s;
+}
+.move-target-flex-box {
+    opacity: 0;
+    transform: translateY(100px);
+    transition: 2.5s;
+}
 .detail {
     padding: 30px;
 }
 .section-img {
     object-fit: contain;
-    /* border-radius: 20%; */
 }
 /* -----header----- */
 header {
@@ -80,12 +89,13 @@ header {
     margin-bottom: 20px;
 }
 /* -----hamburger menu----- */
-.hamberger-menu {
+.hamburger-menu {
     position: fixed;
+    top: 0;
     left: 0;
     display: none;
 }
-.hamberger-btn {
+.hamburger-btn {
     height: 36px;
     width: 40px;
     position: fixed;
@@ -96,7 +106,7 @@ header {
     flex-direction: column;
     z-index: 200;
 }
-.hamberger-line {
+.hamburger-line {
     display: block;
     width: 100%;
     height: 4px;
@@ -104,27 +114,20 @@ header {
     border-radius: 4px;
     transition: .5s;
 }
-/* .hamberger-line:nth-child(1) {
-    transition: .5s;
-}
-.hamberger-line:nth-child(2) {
-    transition: .5s;
-}
-.hamberger-line:nth-child(3) {
-    transition: .5s;
-} */
 .hamburger-nav {
+    position: fixed;
     background-color: #f0f0f0;
     opacity: .9;
     width: 100vw;
     height: 100vh;
-    position: absolute;
-    top: 0;
-    left: -100vw;
     z-index: 150;
     text-align: center;
     transition: .7s;
     padding-top: 70px;
+    left: -100vw;
+}
+.header-nav active {
+    left: 0;
 }
 .hamburger-nav-item a {
     font-size: 34px;
@@ -212,22 +215,8 @@ footer {
     font-size: 20px;
     margin-left: 20px;
 }
-/* 
-.move-target{
-    width:100%;
-    height:700px;
-    display:flex;
-    justify-content:center;
-    flex-direction:row;
-    margin-top:100px;
-    opacity:0.0;
-    transform:translateY(100px);
-    transition:1.5s;
-}
-/* ------------------------------------------------------------- */
-
 /* Tablet-size 対応 css */
-@media screen and(min-width:401px) and (max-width:950px){}
+@media screen and (min-width:401px) and (max-width:950px){}
 /* iphone-size 対応 css */
 @media screen and (max-width:400px){
     /* -----whole web site----- */
@@ -253,30 +242,25 @@ footer {
         display: none;
     }
     /* -----hamburger menu----- */
-    .hamberger-menu {
+    .hamburger-menu {
         display: block;
     }
-    .hamburger-nav.active{
-        /* position:fixed; */
-        /* visibility:visible; */
-        left:0;
-    }
-    .ham-icon.active span:nth-child(1){
+    .hamburger-line.active :nth-child(1){
         top:16px;
         transform:rotate(45deg);
         background-color:#cccccc;
     }
-    .ham-icon.active span:nth-child(2){
+    .hamburger-line.active :nth-child(2){
         opacity:0;
     }
-    .ham-icon.active span:nth-child(3){
+    .hamburger-line.active :nth-child(3){
         top:16px;
         transform:rotate(-45deg);
         background-color:#cccccc;
     }
     /* -----top----- */
     .top-message {
-        font-size: 54px;
+        font-size: 52px;
         transform: translateY(100%);
         letter-spacing: 12px;
     }
