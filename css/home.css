@@ -7,6 +7,7 @@ body {
 }
 img {
     width: 100%;
+    object-fit: contain;
 }
 video {
     width: 100%;
@@ -39,23 +40,17 @@ section {
 }
 .flex-size {
     width: 50%;
-    margin: 0 10px;
+    padding: 30px;
 }
 .move-target-section-title {
     opacity: 0;
     transform: translateX(-100%);
-    transition: 2.5s;
+    transition: 2s;
 }
 .move-target-flex-box {
     opacity: 0;
     transform: translateY(100px);
     transition: 2.5s;
-}
-.detail {
-    padding: 30px;
-}
-.section-img {
-    object-fit: contain;
 }
 /* -----header----- */
 header {
@@ -126,7 +121,7 @@ header {
     padding-top: 70px;
     left: -100vw;
 }
-.header-nav active {
+.header-nav .active {
     left: 0;
 }
 .hamburger-nav-item a {

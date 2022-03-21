@@ -8,6 +8,15 @@ window.onpageshow = function(event){
   // const headerNavItem = document.querySelectorAll('header-nav-item');
   // const hamburgerNavItem = document.querySelectorAll('hamburger-nav-item');
   // const footerNavItem = document.querySelectorAll('footer-nav-item');
+const hamburgerBtn = document.getElementById('hamburger-btn');
+const hamburgerLine = document.getElementById('hamburger-line');
+hamburgerBtn.addEventListener('click', function() {
+  for (let i = 0; i <= hamburgerLine.length; i++) {
+    console.log('hhhhhhhhhh');
+    hamburgerLine[0].classList.toggle('active');
+    hamburgerLine[0].classList.add('active');
+  }
+});
 
 
   // message
