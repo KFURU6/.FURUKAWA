@@ -5,63 +5,23 @@ window.onpageshow = function(event){
     }
   }
 
-// const hamburgerBtn = document.getElementById('hamburger-btn');
-// const hamburgerLine = document.getElementById('hamburger-line');
-// hamburgerBtn.addEventListener('click', function() {
-//   for (let i = 0; i <= hamburgerLine.length; i++) {
-//     console.log('hhhhhhhhhh');
-//     hamburgerLine[0].classList.toggle('active');
-//     hamburgerLine[0].classList.add('active');
-//   }
+// hamburger-btn click
+const hamburgerBtn = document.getElementById("hamburger-btn");
+const hamburgerLine = document.getElementsByClassName("hamburger-line");
+const hamburgerNav = document.getElementById("hamburger-nav");
+hamburgerBtn.addEventListener('click', function() {
+  hamburgerNav.classList.toggle('hamburger-nav-is-open');
+  for (i = 0; i <= hamburgerLine.length; i++) {
+    hamburgerLine[i].classList.toggle('hamburger-line-on');
+  }
+});
+
+// hamburger-nav-item click
+// hamburgerLine.addEventListener('click', function() {
+//   hamburgerNav.classList.toggle('hamburger-nav');
 // });
 
-
-  // message
-  // const topMessage = document.getElementById('message');
-  // window.addEventListener('load',function(){
-  //   topMessage.style.letterSpacing = "8px";
-  //   topMessage.style.opacity = "1.0";
-  // })
-
-// hamburger-menu
-// const hamburgerBtn = document.getElementById('ham-btn');
-// const hamburgerIcon = document.getElementById('ham-icon');
-// const nav = document.getElementById('nav');
-//     hamburgerIcon.addEventListener('click', function() {
-//     hamburgerBtn.classList.toggle('active')
-//     hamburgerIcon.classList.toggle('active')
-//     nav.classList.toggle('active')
-// });
-
-// nav click
-// const navTop = document.getElementById('top-btn');
-// navTop.addEventListener('click',function(){
-//   hamburgerBtn.classList.remove('active')
-//   hamburgerIcon.classList.remove('active')
-//   nav.classList.remove('active')
-// });
-
-// const navService = document.getElementById('service-btn');
-// navService.addEventListener('click',function(){
-//   hamburgerBtn.classList.remove('active')
-//   hamburgerIcon.classList.remove('active')
-//   nav.classList.remove('active')
-// });
-
-// const navWorks = document.getElementById('works-btn');
-// navWorks.addEventListener('click',function(){
-//   hamburgerBtn.classList.remove('active')
-//   hamburgerIcon.classList.remove('active')
-//   nav.classList.remove('active')
-// });
-
-// const navBlog = document.getElementById('blog-btn');
-// navBlog.addEventListener('click',function(){
-//   hamburgerBtn.classList.remove('active')
-//   hamburgerIcon.classList.remove('active')
-//   nav.classList.remove('active')
-// });
-
+// move-target-section-title scroll
 const moveTargetSectionTitle = document.querySelectorAll('.move-target-section-title');
 console.log(moveTargetSectionTitle);
 window.addEventListener('scroll', function () {
@@ -84,7 +44,7 @@ window.addEventListener('scroll', function () {
   }
 });
 
-// move-target-flex-box
+// move-target-flex-box scroll
 console.log('ScreenHeight',window.innerHeight)
 const moveTargetFlexBox = document.querySelectorAll('.move-target-flex-box');
 console.log(moveTargetFlexBox);

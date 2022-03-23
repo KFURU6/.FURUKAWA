@@ -90,19 +90,20 @@ header {
 .hamburger-menu {
     position: fixed;
     top: 0;
-    left: 0;
+    right: 0;
     display: none;
 }
 .hamburger-btn {
-    height: 36px;
+    height: 37px;
     width: 40px;
-    position: fixed;
+    /* position: fixed; */
     top: 16px;
     right: 16px;
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
+    /* display: flex; */
+    /* justify-content: space-between; */
+    /* flex-direction: column; */
     z-index: 200;
+    position: relative;
 }
 .hamburger-line {
     display: block;
@@ -111,6 +112,29 @@ header {
     background-color: #f0f0f0;
     border-radius: 4px;
     transition: .5s;
+    position: absolute;
+}
+.hamburger-line:nth-child(1) {
+    top: 0;
+}
+.hamburger-line:nth-child(2) {
+    top: 18px;
+}
+.hamburger-line:nth-child(3) {
+    bottom: 0; 
+}
+.hamburger-line-on:nth-child(1){
+    top: 18px;
+    transform: rotate(45deg);
+    background-color: #000;
+}
+.hamburger-line-on:nth-child(2){
+    opacity: 0;
+}
+.hamburger-line-on:nth-child(3){
+    top: 18px;
+    transform: rotate(-45deg);
+    background-color: #000;
 }
 .hamburger-nav {
     position: fixed;
@@ -122,9 +146,10 @@ header {
     text-align: center;
     transition: .7s;
     padding-top: 70px;
+    top: 0;
     left: -100vw;
 }
-.header-nav .active {
+.hamburger-nav-is-open {
     left: 0;
 }
 .hamburger-nav-item a {
@@ -145,7 +170,6 @@ header {
     transform: translateY(50%);
     letter-spacing: 36px;
     text-shadow: 10px 5px 3px #808080;
-
 }
 /* -----about----- */
 /* -----skills----- */
@@ -243,19 +267,19 @@ footer {
     .hamburger-menu {
         display: block;
     }
-    .hamburger-line.active :nth-child(1){
-        top:16px;
-        transform:rotate(45deg);
-        background-color:#cccccc;
+    /* .hamburger-line-on:nth-child(1){
+        top: 0;
+        transform: rotate(45deg);
+        background-color: #cccccc;
     }
-    .hamburger-line.active :nth-child(2){
-        opacity:0;
+    .hamburger-line-on:nth-child(2){
+        opacity: 0;
     }
-    .hamburger-line.active :nth-child(3){
-        top:16px;
-        transform:rotate(-45deg);
-        background-color:#cccccc;
-    }
+    .hamburger-line-on:nth-child(3){
+        top: 0;
+        transform: rotate(-45deg);
+        background-color: #cccccc;
+    } */
     /* -----top----- */
     .top-message {
         font-size: 52px;
