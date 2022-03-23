@@ -127,6 +127,7 @@ header {
     top: 18px;
     transform: rotate(45deg);
     background-color: #000;
+    transition: .4s;
 }
 .hamburger-line-on:nth-child(2){
     opacity: 0;
@@ -135,6 +136,7 @@ header {
     top: 18px;
     transform: rotate(-45deg);
     background-color: #000;
+    transition: .4s;
 }
 .hamburger-nav {
     position: fixed;
