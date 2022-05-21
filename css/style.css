@@ -91,7 +91,7 @@ section {
   line-height: 70px;
   margin-left: auto;
 }
-@media screen and (max-width: 1024) {
+@media screen and (max-width: 1024px) {
   .header__nav {
     display: none;
     background: red;
@@ -162,7 +162,7 @@ section {
   right: 0;
   display: none;
 }
-@media screen and (max-width: 1024) {
+@media screen and (max-width: 1024px) {
   .hamburger-menu {
     display: block;
   }
