@@ -11,7 +11,13 @@
     <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans+SC:300" rel="stylesheet">
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/833ce94249.js" crossorigin="anonymous"></script>
+    <script src="./js/page-reload.js" defer></script>
+    <script src="./js/sec-ttl.js" defer></script>
+    <script src="./js/hamburger.js" defer></script>
+    <script src="./js/move-target-from-under.js" defer></script>
+    <script src="./js/smoothscroll.js" defer></script>
+    <script src="./js/back-to-top.js" defer></script>
     <script src="./js/script.js" defer></script>
     <meta name="google-site-verification" content="SZ8YDapOZtMcsGpy_R1BVWRQoV0731YD3pMqYLZsluw" />
 </head>
@@ -19,21 +25,18 @@
 <body>
 
     <!-- header -->
-    <header class="header">
+    <header class="header" id="js-header">
         <div class="header__container container">
             <div class="header__logo">
                 <img src="./image/logo_.FURUKAWA.jpg" alt=".Furukawaのロゴ">
             </div>
             <ul class="header__nav">
-                <li class="header__nav-item"><a href="#top">Top</a></li>
-                <li class="header__nav-item"><a href="#about">About</a></li>
-                <li class="header__nav-item"><a href="#skills">Skills</a></li>
-                <li class="header__nav-item"><a href="#service">Service</a></li>
-                <li class="header__nav-item"><a href="#works">Works</a></li>
-                <li class="header__nav-item"><a href="#blog">Blog</a></li>
-                <li class="header__nav-item"><a href="#contact">Contact</a></li>
-                <li class="header__nav-item"><a href="https://www.instagram.com/kanta.f96/"><i class="fab fa-instagram"></i></a></li>
-                <li class="header__nav-item"><a href="https://twitter.com/home?ref_src=twsrc%5Etfw%7Ctwcamp%5Eembeddedtimeline%7Ctwterm%5Eprofile%3Ahome%7Ctwgr%5EeyJ0ZndfZXhwZXJpbWVudHNfY29va2llX2V4cGlyYXRpb24iOnsiYnVja2V0IjoxMjA5NjAwLCJ2ZXJzaW9uIjpudWxsfSwidGZ3X2hvcml6b25fdHdlZXRfZW1iZWRfOTU1NSI6eyJidWNrZXQiOiJodGUiLCJ2ZXJzaW9uIjpudWxsfSwidGZ3X3NwYWNlX2NhcmQiOnsiYnVja2V0Ijoib2ZmIiwidmVyc2lvbiI6bnVsbH19&ref_url=http%3A%2F%2Flocalhost%3A10003%2Fworks%2F"><i class="fab fa-twitter-square"></i></a></li>
+                <li class="header__nav-item"><a href="#about"><span>About</span></a></li>
+                <li class="header__nav-item"><a href="#skills"><span>Skills</span></a></li>
+                <li class="header__nav-item"><a href="#works"><span>Works</span></a></li>
+                <li class="header__nav-item"><a href="#service"><span>Service</span></a></li>
+                <li class="header__nav-item"><a href="#blog"><span>Blog</span></a></li>
+                <li class="header__nav-item"><a href="#contact"><span>Contact</span></a></li>
             </ul>
         </div>
             
@@ -45,15 +48,12 @@
                 <span class="hamburger-line"></span>
             </div>
             <ul class="hamburger-nav" id="hamburger-nav">
-                <li><a class="hamburger-nav-item" href="#top" id="hamburger-nav-item">Top</a></li>
                 <li><a class="hamburger-nav-item" href="#about" id="hamburger-nav-item">About</a></li>
                 <li><a class="hamburger-nav-item" href="#skills" id="hamburger-nav-item">Sklls</a></li>
                 <li><a class="hamburger-nav-item" href="#service" id="hamburger-nav-item">Service</a></li>
                 <li><a class="hamburger-nav-item" href="#works" id="hamburger-nav-item">Works</a></li>
                 <li><a class="hamburger-nav-item" href="#blog" id="hamburger-nav-item">Blog</a></li>
                 <li><a class="hamburger-nav-item" href="#contact" id="hamburger-nav-item">Contact</a></li>
-                <li><a class="hamburger-nav-item" href="https://www.instagram.com/kanta.f96/" id="hamburger-nav-item"><i class="fab fa-instagram"></i></a></li>
-                <li><a class="hamburger-nav-item" href="https://twitter.com/home?ref_src=twsrc%5Etfw%7Ctwcamp%5Eembeddedtimeline%7Ctwterm%5Eprofile%3Ahome%7Ctwgr%5EeyJ0ZndfZXhwZXJpbWVudHNfY29va2llX2V4cGlyYXRpb24iOnsiYnVja2V0IjoxMjA5NjAwLCJ2ZXJzaW9uIjpudWxsfSwidGZ3X2hvcml6b25fdHdlZXRfZW1iZWRfOTU1NSI6eyJidWNrZXQiOiJodGUiLCJ2ZXJzaW9uIjpudWxsfSwidGZ3X3NwYWNlX2NhcmQiOnsiYnVja2V0Ijoib2ZmIiwidmVyc2lvbiI6bnVsbH19&ref_url=http%3A%2F%2Flocalhost%3A10003%2Fworks%2F" id="hamburger-nav-item"><i class="fab fa-twitter-square"></i></a></li>
             </ul>
         </div>
     </header>
@@ -62,28 +62,24 @@
     <div class="top">
             <p class="top-message">Welcome To <br> My Website</p>
     </div>
+    <div class="scrolldown2"><span>Scroll</span></div>
 
     <!-- about -->
     <section class="about" id="about">
         <div class="about__container container js-move-target-from-under">
-            <h2 class="about__section-title section-title">Furukawaについて</h2>
+            <h2 class="about__section-title section-title">About</h2>
             <div class="about__wrap">
                 <div class="about__text">
                     <p>
                         1996年生まれ。ふたご座のo型。千葉県出身。千葉県在住。
-                        私は中学生の時から始めたサッカーを今も継続し、サッカーが好きな人間です。
-                        学生の時の評定がオール2であり、Fラン大学を卒業しております。</br>
-                        そんな私がWeb制作を始めた経緯をお話しさせていただきます。
+                        私がWeb制作を始めてみようと思った経緯をお話しさせていただきます。
                         直近の仕事では物流業界で働いておりIT業界とは全くの無縁です。
-                        物流業界では日々の消化作業であり、自分の成長を感じることができませんでした。
-                        業務では微量にPCを使用しておりましたが、私がPCを触り始めたのはこの時が初めてです。
-                        恥ずかしい話ですが、PCを会社から貸与されて単純にかっこいいと思ってしまっていました。
-                        PCを触ることが好きでしたので、業務でPCに関するスキルは休みの日を利用して勉強をしておりました。
-                        ある程度業務で必要なPCスキルを身につけた時に目的を果たしてしまったような気分で充実感を得られませんでした。
-                        私は仕事が好きなので仕事が充実していないと休日が充実しないと少し変わった感覚を持っております。
-                        そこで、もっとPCを使う仕事がしたいと思いました。</br>
-                        目的を持つことで日々の過ごし方、時間の使い方を大切にしようという気持ちも芽生えました。
-                        ざっくりまとめましたが、目的を持って生きることでつまらないと思っている世の中が楽しく感じると思います。
+                        物流業界では日々の消化作業であり、自分の成長を感じることができませんでした。</br>
+                        そんな毎日に不安を抱くようになり、スキルが身に付く仕事を探そうと思いWeb制作という仕事があること知りました。
+                        少しパソコンが得意でしたので、勉強をしてみようと思いました。
+                        学業に関しては学生の時の評定がオール2であり、Fラン大学を卒業しておりますので自信をもって公言できるようなことではありません。</br>
+                        しかし、なにか目的を持つことで日々の過ごし方、時間の使い方を大切にしようという気持ちも芽生えました。
+                        話が長くなってしまうので最後にしますが、目的を持って生きることでつまらないと思っている世の中が楽しく感じると思います。
                         この内容を読んで少しでも多くの人が、挑戦していく姿勢と諦めない姿勢を持って人生を楽しく生きてみようと思ってくれることを祈っております。</br>
                     </p>
                 </div>
@@ -104,28 +100,28 @@
                         <img src="./image/skills_html-5.png" alt="">
                     </div>
                     <p>Html5</p>
-                    <p>Webサイトの骨組みを作成します。</p>
+                    <!-- <p>Webサイトの骨組みを作成します。</p> -->
                 </div>
                 <div class="skills__card">
                     <div class="skills__img">
                         <img src="./image/skills_css-3.png" alt="">
                     </div>
                     <p>Css3</p>
-                    <p>Webサイトの骨組みにスタイルをつけます。</p>
+                    <!-- <p>Webサイトの骨組みにスタイルをつけます。</p> -->
                 </div>
                 <div class="skills__card">
                     <div class="skills__img">
                         <img src="./image/skills_js.png" alt="">
                     </div>
                     <p>JavaScript</p>
-                    <p>Webサイトに動きをつけます。</p>
+                    <!-- <p>Webサイトに動きをつけます。</p> -->
                 </div>
                 <div class="skills__card">
                     <div class="skills__img">
                         <img src="./image/skills_jquery.png" alt="">
                     </div>
                     <p>jQuery</p>
-                    <p>簡略化されたコードでWebサイトに動きをつけます。</p>
+                    <!-- <p>簡略化されたコードでWebサイトに動きをつけます。</p> -->
                 </div>
             </div>
         </div>
@@ -140,10 +136,9 @@
                     <p class="works__text">.Furukawaが過去に制作した実績をご紹介します。</p>
                     <ul class="works__list">
                         <li><a href="https://kfuru6.github.io/Sample_Corp/">Sample Corp</a></li>
-                        <li><a href="https://kfuru6.github.io/tokyo-anpan/">東京あんぱん</a></li>
                         <li><a href="https://kfuru6.github.io/Sobolon/">sobolon</a></li>
-                        <li><a href="https://kfuru6.github.io/Furniture_Design/Furniture_Design/Top.html">Furniture Design</a></li>
-                        <li><a href="https://kfuru6.github.io/bicycle_site/bicycle.html">KAKERU MICHI Profile Site</a></li>
+                        <li><a href="kfuru6.github.io/bicycle_site/">KAKERU MICHI Profile Site</a></li>
+                        <li><a href="https://kfuru6.github.io/tokyo-anpan/">東京あんぱん</a></li>
                     </ul>
                 </div>
                 <div class="works__img">
@@ -237,26 +232,26 @@
     <section class="contact" id="contact">
         <div class="contact__container container js-move-target-from-under">
             <h2 class="contact__section-title section-title">Contact</h2>
-            <form action="" method="post" class="contact__form">
+            <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSefANOc4bKqFL2JbNL02MhSwKxYjHI1-XB2O1zrGfnO0iEqNA/formResponse" method="post" class="contact__form" id="contact-submit" target="dummy_send_target">
                 <dl>
                     <label class="contact__item">
                         <dt>Name :</dt>
                         <dd>
-                            <input type="text" name="" required>
+                            <input type="text" name="entry.1968105161" required>
                         </dd>
                     </label>
         
                     <label class="contact__item">
                         <dt>Email :</dt>
                         <dd>
-                            <input type="email" name="" required>
+                            <input type="email" name="emailAddress" required>
                         </dd>
                     </label>
         
                     <label class="contact__item">
                         <dt>Content :</dt>
                         <dd>
-                            <textarea name="" required></textarea>
+                            <textarea name="entry.834685139" required></textarea>
                         </dd>
                     </label>
                 </dl>
@@ -264,16 +259,25 @@
                     <button type="submit" class="btn">Submit</button>
                 </div>
             </form>
+            <p id="words_of_thanks">
+               Thank you for your message！
+            </p>
         </div>
     </section>
 
     <footer class="footer">
         <div class="footer__contaier container">
+            <div class="footer-sns">
+                <a href="https://www.instagram.com/kanta.f96/" target="_blank"><i class="fab fa-2x fa-instagram"></i></a>
+                <a href="https://twitter.com/home?ref_src=twsrc%5Etfw%7Ctwcamp%5Eembeddedtimeline%7Ctwterm%5Eprofile%3Ahome%7Ctwgr%5EeyJ0ZndfZXhwZXJpbWVudHNfY29va2llX2V4cGlyYXRpb24iOnsiYnVja2V0IjoxMjA5NjAwLCJ2ZXJzaW9uIjpudWxsfSwidGZ3X2hvcml6b25fdHdlZXRfZW1iZWRfOTU1NSI6eyJidWNrZXQiOiJodGUiLCJ2ZXJzaW9uIjpudWxsfSwidGZ3X3NwYWNlX2NhcmQiOnsiYnVja2V0Ijoib2ZmIiwidmVyc2lvbiI6bnVsbH19&ref_url=http%3A%2F%2Flocalhost%3A10003%2Fworks%2F" target="_blank"><i class="fab fa-2x fa-twitter-square"></i></a>
+            </div>
             <div class="footer__copyright">
                 <p>&copy;2022 K-Furukawa</p>
             </div>
         </div>
     </footer>
+
+    <div class="page_top" id="page_top"><a href="#"><i class="fa-solid fa-2x fa-chevron-up"></i></a></div>
 
 </body>
 </html>

@@ -52,7 +52,7 @@ section {
   font-weight: bold;
   opacity: 0;
   transform: translateX(-100%);
-  transition: 2s;
+  transition: transform 1.5s, opacity 1.5s ease 0s;
 }
 @media screen and (max-width: 599px) {
   .section-title {
@@ -63,7 +63,7 @@ section {
 .js-move-target-from-under {
   opacity: 0;
   transform: translateY(100px);
-  transition: 2.5s;
+  transition: transform 1.5s, opacity 1.5s ease 0s;
 }
 
 .header {
@@ -76,25 +76,26 @@ section {
 
 .header__container {
   display: flex;
-  justify-content: space-between;
+  height: inherit;
 }
 
 .header__logo img {
-  max-width: 390px;
+  max-width: 270px;
   width: 100%;
   height: 100%;
   display: block;
-}
-@media screen and (max-width: 599px) {
-  .header__logo img {
-    max-width: 270px;
-  }
 }
 
 .header__nav {
   display: flex;
   line-height: 70px;
   margin-left: auto;
+}
+@media screen and (max-width: 1024) {
+  .header__nav {
+    display: none;
+    background: red;
+  }
 }
 @media screen and (max-width: 599px) {
   .header__nav {
@@ -107,7 +108,52 @@ section {
   transition: 0.5s;
 }
 .header__nav-item:nth-child(n+2) {
-  margin-left: 30px;
+  margin-left: 20px;
+}
+.header__nav-item a {
+  padding: 0.2em;
+  position: relative;
+}
+.header__nav-item a::before, .header__nav-item a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background: #fff;
+  transition: all 0.2s linear;
+  transition-delay: 0.2s;
+}
+.header__nav-item a::before {
+  right: 0;
+  top: 0;
+}
+.header__nav-item a::after {
+  left: 0;
+  bottom: 0;
+}
+.header__nav-item a .current::before,
+.header__nav-item a .current::after, .header__nav-item a:hover::before, .header__nav-item a:hover::after {
+  width: 100%;
+}
+.header__nav-item a .current span::before,
+.header__nav-item a .current span::after, .header__nav-item a:hover span::before, .header__nav-item a:hover span::after {
+  height: 100%;
+}
+.header__nav-item a span::before, .header__nav-item a span::after {
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 0;
+  background: #fff;
+  transition: all 0.2s linear;
+}
+.header__nav-item a span::before {
+  left: 0;
+  top: 0;
+}
+.header__nav-item a span::after {
+  right: 0;
+  bottom: 0;
 }
 
 .hamburger-menu {
@@ -115,6 +161,11 @@ section {
   top: 0;
   right: 0;
   display: none;
+}
+@media screen and (max-width: 1024) {
+  .hamburger-menu {
+    display: block;
+  }
 }
 @media screen and (max-width: 599px) {
   .hamburger-menu {
@@ -218,6 +269,91 @@ section {
     font-size: 40px;
     letter-spacing: 12px;
   }
+}
+
+.scrolldown2 {
+  position: absolute;
+  bottom: 30px;
+  left: calc(100% - 50px);
+}
+
+.scrolldown2 span {
+  position: absolute;
+  left: 10px;
+  bottom: 10px;
+  color: #eee;
+  font-size: 0.7rem;
+  letter-spacing: 0.05em;
+  -ms-writing-mode: tb-rl;
+  writing-mode: vertical-rl;
+}
+
+.scrolldown2:before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: -4px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #eee;
+  -webkit-animation: circlemove 1.6s ease-in-out infinite, cirlemovehide 1.6s ease-out infinite;
+          animation: circlemove 1.6s ease-in-out infinite, cirlemovehide 1.6s ease-out infinite;
+}
+
+@-webkit-keyframes circlemove {
+  0% {
+    bottom: 45px;
+  }
+  100% {
+    bottom: -5px;
+  }
+}
+
+@keyframes circlemove {
+  0% {
+    bottom: 45px;
+  }
+  100% {
+    bottom: -5px;
+  }
+}
+@-webkit-keyframes cirlemovehide {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 0.9;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes cirlemovehide {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 0.9;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.scrolldown2:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 2px;
+  height: 50px;
+  background: #eee;
 }
 
 .about__wrap {
@@ -490,12 +626,19 @@ section {
   font-family: "Alegreya Sans SC", sans-serif;
   transition: all 0.4s ease 0s;
   border-radius: 10px;
+  background: #fff;
 }
 .btn:hover {
   background: #000;
   color: #fff;
   border: none;
   border: 1px solid #fff;
+}
+
+#words_of_thanks {
+  text-align: center;
+  font-size: 30px;
+  display: none;
 }
 
 .footer {
@@ -507,7 +650,25 @@ section {
   }
 }
 
+.footer-sns {
+  text-align: center;
+}
+.footer-sns a:nth-of-type(n+2) {
+  margin-left: 30px;
+}
+
 .footer__copyright {
   text-align: center;
   padding: 30px;
+}
+
+.page_top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  opacity: 0;
+  transition: opacity 0.4s ease 0s;
+}
+.page_top.show {
+  opacity: 0.6;
 }

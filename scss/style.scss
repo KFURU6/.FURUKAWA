@@ -57,7 +57,7 @@ section {
     font-weight: bold;
     opacity: 0;
     transform: translateX(-100%);
-    transition: 2s;
+    transition: transform 1.5s, opacity 1.5s ease 0s;
 
     @include mq(sp) {
         font-size: 36px;
@@ -67,7 +67,7 @@ section {
 .js-move-target-from-under {
     opacity: 0;
     transform: translateY(100px);
-    transition: 2.5s;
+    transition: transform 1.5s, opacity 1.5s ease 0s;
 }
 // /whole web site
 // ========================================
@@ -84,19 +84,15 @@ section {
 
 .header__container {
     display: flex;
-    justify-content: space-between;
+    height: inherit;
 }
 
 .header__logo {
     img {
-        max-width: 390px;
+        max-width: 270px;
         width: 100%;
         height: 100%;
         display: block;
-        
-        @include mq(sp) {
-            max-width: 270px;
-        }
     }
 }
 
@@ -104,6 +100,11 @@ section {
     display: flex;
     line-height: 70px;
     margin-left: auto;
+
+    @include mq(tab) {
+        display: none;
+        background: red;
+    }
 
     @include mq(sp) {
         display: none;
@@ -115,7 +116,71 @@ section {
     transition: .5s;
 
     &:nth-child(n + 2) {
-        margin-left: 30px;
+        margin-left: 20px;
+    }
+
+    a {
+        padding: .2em;
+        position: relative;
+
+        &::before,
+        &::after {
+            content:"";
+          position: absolute;
+          width: 0;
+          height: 2px;
+          background: #fff;
+          transition: all 0.2s linear;
+          transition-delay: 0.2s;
+        }
+
+        &::before {
+            right: 0;
+            top: 0;
+        }
+
+        &::after {
+            left: 0;
+            bottom: 0;
+        }
+
+        .current::before,
+        .current::after,
+        &:hover::before,
+        &:hover::after {
+            width: 100%;
+        }
+
+        .current span::before,
+        .current span::after,
+        &:hover span::before,
+        &:hover span::after{
+            height: 100%;
+        }
+
+        span {
+            // display: inline-block;
+
+            &::before,
+            &::after {
+                content: "";
+                position: absolute;
+                width: 2px;
+                height: 0;
+                background: #fff;
+                transition: all 0.2s linear;
+            }
+
+            &::before {
+                left: 0;
+                top: 0;
+            }
+
+            &::after {
+                right: 0;
+                bottom: 0;
+            }
+        }
     }
 }
 // /header
@@ -128,6 +193,10 @@ section {
     top: 0;
     right: 0;
     display: none;
+
+    @include mq(tab) {
+        display: block;
+    }
 
     @include mq(sp) {
         display: block;
@@ -242,6 +311,60 @@ section {
         font-size: 40px;
         letter-spacing: 12px;
     }
+}
+
+.scrolldown2{
+  position: absolute;
+  bottom: 30px;
+  left: calc(100% - 50px);
+}
+
+.scrolldown2 span{
+  position: absolute;
+  left:10px;
+  bottom:10px;
+  color: #eee;
+  font-size: 0.7rem;
+  letter-spacing: 0.05em;
+  -ms-writing-mode: tb-rl;
+    -webkit-writing-mode: vertical-rl;
+    writing-mode: vertical-rl;
+}
+
+.scrolldown2:before {
+    content: "";
+    position: absolute;
+    bottom:0;
+    left:-4px;
+  width:10px;
+  height:10px;
+  border-radius: 50%;
+  background:#eee;
+  animation:
+    circlemove 1.6s ease-in-out infinite,
+    cirlemovehide 1.6s ease-out infinite;
+}
+
+@keyframes circlemove{
+      0%{bottom:45px;}
+     100%{bottom:-5px;}
+ }
+
+@keyframes cirlemovehide{
+      0%{opacity:0}
+     50%{opacity:1;}
+    80%{opacity:0.9;}
+  100%{opacity:0;}
+ }
+
+.scrolldown2:after{
+  content:"";
+  position: absolute;
+  bottom:0;
+  left:0;
+  width:2px;
+  height: 50px;
+  background:#eee;
 }
 // /top
 // ========================================
@@ -547,6 +670,7 @@ section {
     font-family: 'Alegreya Sans SC', sans-serif;
     transition: all .4s ease 0s;
     border-radius: 10px;
+    background: #fff;
 
     &:hover {
         background: #000;
@@ -554,6 +678,12 @@ section {
         border: none;
         border: 1px solid #fff;
     }
+}
+
+#words_of_thanks {
+    text-align: center;
+    font-size: 30px;
+    display: none;
 }
 
 // /contact
@@ -569,9 +699,34 @@ section {
     }
 }
 
+.footer-sns {
+    text-align: center;
+    a {
+        &:nth-of-type(n+2) {
+            margin-left: 30px;
+        }
+    }
+}
+
 .footer__copyright {
     text-align: center;
     padding: 30px;
 }
 // /footer
+// ========================================
+
+// ========================================
+// page_top
+.page_top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    opacity: 0;
+    transition: opacity .4s ease 0s;
+
+    &.show {
+        opacity: .6;
+    }
+}
+// /page_top
 // ========================================
