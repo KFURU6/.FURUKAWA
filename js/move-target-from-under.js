@@ -1,4 +1,3 @@
-// js-move-target-from-under scroll
 console.log('ScreenHeight',window.innerHeight)
 const moveTargetFlexBox = document.querySelectorAll('.js-move-target-from-under');
 console.log(moveTargetFlexBox);

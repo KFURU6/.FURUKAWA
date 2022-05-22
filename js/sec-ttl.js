@@ -1,4 +1,3 @@
-// section-title scroll
 const moveTargetSectionTitle = document.querySelectorAll('.section-title');
 console.log(moveTargetSectionTitle);
 window.addEventListener('scroll', function() {
