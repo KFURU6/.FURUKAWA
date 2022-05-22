@@ -431,13 +431,33 @@ section {
   width: calc(50% - 120px);
   margin: 0 30px;
 }
+@media screen and (max-width: 1024px) {
+  .works__card {
+    width: 100%;
+    padding: 0 60px;
+  }
+}
+@media screen and (max-width: 599px) {
+  .works__card {
+    padding: 0;
+  }
+}
 .works__card:nth-of-type(n + 3) {
   margin-top: 38px;
+}
+@media screen and (max-width: 1024px) {
+  .works__card:nth-of-type(n + 2) {
+    margin-top: 56px;
+  }
 }
 
 .works__title {
   text-align: center;
   font-weight: 700;
+}
+
+.works__img {
+  margin-top: 12px;
 }
 
 .service__wrap {

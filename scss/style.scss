@@ -460,14 +460,33 @@ section {
     width: calc(50% - (30px * 4));
     margin: 0 30px;
 
+    @include mq(tab) {
+        width: 100%;
+        padding: 0 60px;
+    }
+    
+    @include mq(sp) {
+        padding: 0;
+    }
+
     &:nth-of-type(n + 3) {
         margin-top: 38px;
+    }
+    
+    @include mq(tab) {
+        &:nth-of-type(n + 2) {
+            margin-top: 56px;
+        }
     }
 }
 
 .works__title {
     text-align: center;
     font-weight: 700;
+}
+
+.works__img {
+    margin-top: 12px;
 }
 // /works
 // ========================================
