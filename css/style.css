@@ -22,6 +22,7 @@ li {
 a {
   text-decoration: none;
   color: #f0f0f0;
+  transition: opacity 0.4s ease 0s;
 }
 a:hover {
   opacity: 0.7;
@@ -419,44 +420,24 @@ section {
   margin-top: 8px;
 }
 
-.works__wrap {
-  display: flex;
-  flex-direction: row-reverse;
+.works__cards {
   margin-top: 40px;
-}
-@media screen and (max-width: 599px) {
-  .works__wrap {
-    display: block;
-  }
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
-.works__info {
-  flex: 0 1 50%;
-  padding: 20px;
+.works__card {
+  width: calc(50% - 120px);
+  margin: 0 30px;
+}
+.works__card:nth-of-type(n + 3) {
+  margin-top: 38px;
 }
 
-.works__img {
-  flex: 0 0 50%;
-  padding: 20px;
-}
-.works__img img {
-  height: 500px;
-}
-@media screen and (max-width: 599px) {
-  .works__img img {
-    height: 250px;
-  }
-}
-
-.works__text {
-  display: block;
-}
-
-.works__list {
-  margin-top: 18px;
-}
-.works__list li:not(:first-child) {
-  margin-top: 14px;
+.works__title {
+  text-align: center;
+  font-weight: 700;
 }
 
 .service__wrap {

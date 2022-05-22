@@ -27,6 +27,7 @@ li {
 a {
     text-decoration: none;
     color: #f0f0f0;
+    transition: opacity .4s ease 0s;
 
     &:hover {
         opacity: 0.7;
@@ -257,7 +258,6 @@ section {
     }
 }
 
-
 .hamburger-nav {
     position: fixed;
     background-color: #f0f0f0;
@@ -449,46 +449,25 @@ section {
 
 // ========================================
 // works
-.works__wrap {
-    display: flex;
-    flex-direction: row-reverse;
+.works__cards {
     margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
 
-    @include mq(sp) {
-        display: block;
+.works__card {
+    width: calc(50% - (30px * 4));
+    margin: 0 30px;
+
+    &:nth-of-type(n + 3) {
+        margin-top: 38px;
     }
 }
 
-.works__info {
-    flex: 0 1 50%;
-    padding: 20px;
-}
-
-.works__img {
-    flex: 0 0 50%;
-    padding: 20px;
-
-    img {
-        height: 500px;
-
-        @include mq(sp) {
-            height: 250px;
-        }
-    }
-}
-
-.works__text {
-    display: block;
-}
-
-.works__list {
-    margin-top: 18px;
-
-    li {
-        &:not(:first-child) {
-            margin-top: 14px;
-        }
-    }
+.works__title {
+    text-align: center;
+    font-weight: 700;
 }
 // /works
 // ========================================
@@ -538,7 +517,6 @@ section {
         padding: 5px;
     }
 }
-
 // /service
 // ========================================
 
@@ -689,7 +667,6 @@ section {
     font-size: 30px;
     display: none;
 }
-
 // /contact
 // ========================================
 
