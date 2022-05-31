@@ -60,7 +60,7 @@
 
     <!-- top -->
     <div class="top">
-            <p class="top-message">Welcome To <br> My Website</p>
+        <p class="top-message">Welcome To <br> My Website</p>
     </div>
     <div class="scrolldown2"><span>Scroll</span></div>
 
@@ -79,7 +79,7 @@
                     </p>
                 </div>
                 <div class="about__img">
-                    <img src="./image/about_furukawa_person.jpg" alt="古川の写真">
+                    <img src="./image/about_furukawa_person.jpg" alt="古川の写真" loading="lazy">
                 </div>
             </div>
         </div>
@@ -92,27 +92,38 @@
             <div class="skills__cards">
                 <div class="skills__card">
                     <div class="skills__img">
-                        <img src="./image/skills_html-5.png" alt="">
+                        <img src="./image/skills_html.png" alt="" loading="lazy">
                     </div>
                     <p>Html5</p>
+                    <p>★★★☆☆</p>
                 </div>
                 <div class="skills__card">
                     <div class="skills__img">
-                        <img src="./image/skills_css-3.png" alt="">
+                        <img src="./image/skills_css.png" alt="" loading="lazy">
                     </div>
                     <p>Css3</p>
+                    <p>★★★☆☆</p>
                 </div>
                 <div class="skills__card">
                     <div class="skills__img">
-                        <img src="./image/skills_js.png" alt="">
+                        <img src="./image/skills_sass.png" alt="" loading="lazy">
+                    </div>
+                    <p>Sass</p>
+                    <p>★★★☆☆</p>
+                </div>
+                <div class="skills__card">
+                    <div class="skills__img">
+                        <img src="./image/skills_js.png" alt="" loading="lazy">
                     </div>
                     <p>JavaScript</p>
+                    <p>★★☆☆☆</p>
                 </div>
                 <div class="skills__card">
                     <div class="skills__img">
                         <img src="./image/skills_jquery.png" alt="">
                     </div>
                     <p>jQuery</p>
+                    <p>★★☆☆☆</p>
                 </div>
             </div>
         </div>
@@ -127,7 +138,7 @@
                     <a href="https://kfuru6.github.io/Sample_Corp/" class="works__link" target="_blank">
                         <p class="works__title">Sample Corp</p>
                         <div class="works__img">
-                            <img src="./image/sample_corp.png" alt="Sample Corp">
+                            <img src="./image/sample_corp.png" alt="Sample Corp" loading="lazy">
                         </div>
                     </a>
                 </li>
@@ -136,7 +147,7 @@
                     <a href="https://kfuru6.github.io/Sobolon/" class="works__link" target="_blank">
                         <p class="works__title">sobolon</p>
                         <div class="works__img">
-                            <img src="./image/sobolon.png" alt="sobolon">
+                            <img src="./image/sobolon.png" alt="sobolon" loading="lazy">
                         </div>
                     </a>
                 </li>
@@ -145,7 +156,7 @@
                     <a href="https://kfuru6.github.io/bicycle_site/" class="works__link" target="_blank">
                         <p class="works__title">KAKERU MICHI Profile Site</p>
                         <div class="works__img">
-                            <img src="./image/kakeru_michi.png" alt="KAKERU MICHI">
+                            <img src="./image/kakeru_michi.png" alt="KAKERU MICHI" loading="lazy">
                         </div>
                     </a>
                 </li>
@@ -154,7 +165,7 @@
                     <a href="https://kfuru6.github.io/tokyo-anpan/" class="works__link" target="_blank">
                         <p class="works__title">東京あんぱん</p>
                         <div class="works__img">
-                            <img src="./image/tokyo_anpan.png" alt="東京あんぱん">
+                            <img src="./image/tokyo_anpan.png" alt="東京あんぱん" loading="lazy">
                         </div>
                     </a>
                 </li>
@@ -169,10 +180,10 @@
             <h2 class="service__section-title section-title">Service</h2>
             <div class="service__wrap">
                 <div class="service__info">
-                    <p class="service-text">.Furukawaはお客様のご要望を的確にヒアリングし、期待以上のサービスを提供できるようベストを尽くします。</br>
+                    <p class="service__text">.Furukawaはお客様のご要望を的確にヒアリングし、期待以上のサービスを提供できるようベストを尽くします。</br>
                         どのようなご要件も受付させていただきます。
                     </p>
-                    <table class="price-list">
+                    <table class="service__price-list">
                         <thead>
                             <tr>
                                 <th colspan="3">price list</th>
@@ -186,29 +197,25 @@
                             </tr>
                             <tr>
                                 <td>LP制作(コーディング)</td>
-                                <td>¥30,000</td>
+                                <td>要相談</td>
                                 <td>1ヶ月</td>
                             </tr>
                             <tr>
                                 <td>HP制作</td>
-                                <td>¥30,000</td>
+                                <td>要相談</td>
                                 <td>1ヶ月</td>
                             </tr>
                             <tr>
                                 <td>HP修正</td>
-                                <td>¥5,000</td>
+                                <td>要相談</td>
                                 <td>1週間</td>
                             </tr>
                         </tbody>
                     </table>
                 </div>
-                <div class="service__img">
-                    <img src="image/service.jpg" alt="iPhone">
-                </div>
             </div>
         </div>
     </section>
-
 
     <section class="video">
         <video playsinline autoplay loop muted>
@@ -216,8 +223,8 @@
         </video>
     </section>
 
-
     <!-- Blog -->
+    <!-- 今後wpでブログ開設予定 -->
     <section class="blog" id="blog">
         <div class="blog__container container js-move-target-from-under" id="blog">
             <h2 class="blog__section-title section-title">Blog</h2>
@@ -229,9 +236,6 @@
                     <div class="blog__sns">
                         <a class="twitter-timeline" data-width="500" data-height="400" data-theme="light" href="https://twitter.com/NIKE_NJR_11?ref_src=twsrc%5Etfw">Tweets by NIKE_NJR_11</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
                     </div>
-                </div>
-                <div class="blog__img">
-                    <img src="image/blog.jpg" alt="植物">
                 </div>
             </div>
         </div>

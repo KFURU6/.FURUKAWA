@@ -104,12 +104,8 @@ section {
 
     @include mq(tab) {
         display: none;
-        // background: red;
     }
 
-    @include mq(sp) {
-        // display: none;
-    }
 }
 
 .header__nav-item {
@@ -160,7 +156,6 @@ section {
         }
 
         span {
-            // display: inline-block;
 
             &::before,
             &::after {
@@ -340,14 +335,29 @@ section {
   height:10px;
   border-radius: 50%;
   background:#eee;
-  animation:
+  -webkit-animation:
+    circlemove 1.6s ease-in-out infinite,
+    cirlemovehide 1.6s ease-out infinite;
+          animation:
     circlemove 1.6s ease-in-out infinite,
     cirlemovehide 1.6s ease-out infinite;
 }
 
+@-webkit-keyframes circlemove{
+      0%{bottom:45px;}
+     100%{bottom:-5px;}
+ }
+
 @keyframes circlemove{
       0%{bottom:45px;}
      100%{bottom:-5px;}
+ }
+
+@-webkit-keyframes cirlemovehide{
+      0%{opacity:0}
+     50%{opacity:1;}
+    80%{opacity:0.9;}
+  100%{opacity:0;}
  }
 
 @keyframes cirlemovehide{
@@ -409,7 +419,7 @@ section {
     flex-wrap: wrap;
     -moz-column-gap: 40px;
     column-gap: 40px;
-    row-gap: 20px;
+    row-gap: 30px;
     margin-top: 40px;
     
     @include mq(tab) {
@@ -442,6 +452,10 @@ section {
     p {
         display: block;
         margin-top: 8px;
+
+        &:nth-of-type(2) {
+            margin-top: 4px;
+        }
     }
 }
 // /skills
@@ -494,42 +508,36 @@ section {
 // ========================================
 // service
 .service__wrap {
-    display: flex;
+    // display: flex;
     margin-top: 40px;
     
     @include mq(sp) {
         margin-top: 20px;
-        display: block;
     }
 }
 
 .service__info {
-    flex: 0 1 50%;
     padding: 20px;
 }
 
-.service__img {
-    flex: 0 0 50%;
-    padding: 20px;
+.service__text {
+    margin: 0 40px;
 
-    img {
-        height: 500px;
-
-        @include mq(sp) {
-            height: 250px;
-        }
+    @include mq(sp) {
+        margin: 0 10px;
     }
 }
 
-.service-text {
-    margin-bottom: 20px;
-    display: block;
-}
-
-.price-list {
-    width: 100%;
-    margin-top: 40px;
+.service__price-list {
+    width: 50%;
+    margin: 40px auto 0;
     vertical-align: middle;
+    border: 1px solid #C0C0C0;
+    box-shadow: 5px 5px 1px #C0C0C0;
+
+    @include mq(sp) {
+        width: 100%;
+    }
 
     td {
         text-align: right;
@@ -541,38 +549,22 @@ section {
 
 // ========================================
 // blog
-.blog__wrap {
-    display: flex;
-
-    @include mq(sp) {
-        display: block;
-    }
-}
-
 .blog__info {
-    flex: 0 1 50%;
-    padding: 20px;
+    padding-top: 40px;
 }
 
 .blog__text {
     display: block;
+    margin: 0 40px;
+    
+    @include mq(sp) {
+        margin: 0 10px;
+    }
 }
 
 .blog__sns {
-    margin-top: 20px;
-}
-
-.blog__img {
-    flex: 0 0 50%;
-    padding: 20px;
-
-    img {
-        height: 500px;
-
-        @include mq(sp) {
-            height: 250px;
-        }
-    }
+    margin-top: 30px;
+    text-align: center;
 }
 // /blog
 // ========================================
