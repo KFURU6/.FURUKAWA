@@ -1,6 +1,5 @@
 body {
   color: #fff;
-  background-color: #000;
   font-family: "Alegreya Sans SC", sans-serif;
   line-height: 1.5;
 }
@@ -39,6 +38,10 @@ section {
   section {
     margin-top: 120px;
   }
+}
+
+.bg-wrap {
+  background: #000;
 }
 
 .container {
@@ -243,6 +246,8 @@ section {
   width: 100%;
   height: 100vh;
   position: relative;
+  background: #000;
+  z-index: -20;
 }
 
 .top-message {
@@ -257,13 +262,26 @@ section {
   transform: translateY(-50%);
   letter-spacing: 36px;
   text-shadow: 10px 5px 3px #808080;
-  z-index: -1;
+  z-index: 20;
+}
+@media screen and (max-width: 1024px) {
+  .top-message {
+    font-size: 60px;
+  }
 }
 @media screen and (max-width: 599px) {
   .top-message {
     font-size: 40px;
     letter-spacing: 12px;
   }
+}
+
+.top__video {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  z-index: -10;
 }
 
 .scrolldown2 {
@@ -350,6 +368,15 @@ section {
   background: #eee;
 }
 
+.about {
+  background-color: #000;
+}
+@media screen and (max-width: 599px) {
+  .about {
+    margin-top: 0;
+  }
+}
+
 .about__wrap {
   display: flex;
   margin-top: 40px;
@@ -376,6 +403,10 @@ section {
   .about__img img {
     height: 250px;
   }
+}
+
+.skills {
+  background-color: #000;
 }
 
 .skills__cards {
@@ -423,6 +454,10 @@ section {
   margin-top: 4px;
 }
 
+.works {
+  background-color: #000;
+}
+
 .works__cards {
   margin-top: 40px;
   display: flex;
@@ -461,6 +496,10 @@ section {
 
 .works__img {
   margin-top: 12px;
+}
+
+.service {
+  background-color: #000;
 }
 
 .service__wrap {
@@ -502,6 +541,10 @@ section {
   padding: 5px;
 }
 
+.blog {
+  background-color: #000;
+}
+
 .blog__info {
   padding-top: 40px;
 }
@@ -519,6 +562,10 @@ section {
 .blog__sns {
   margin-top: 30px;
   text-align: center;
+}
+
+.contact {
+  background-color: #000;
 }
 
 .contact__form {
@@ -624,6 +671,7 @@ section {
 
 .footer {
   margin-top: 200px;
+  background-color: #000;
 }
 @media screen and (max-width: 599px) {
   .footer {
