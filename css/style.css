@@ -370,11 +370,7 @@ section {
 
 .about {
   background-color: #000;
-}
-@media screen and (max-width: 599px) {
-  .about {
-    margin-top: 0;
-  }
+  margin-top: 0;
 }
 
 .about__wrap {
